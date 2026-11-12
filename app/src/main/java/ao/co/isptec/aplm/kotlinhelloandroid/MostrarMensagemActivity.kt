@@ -22,14 +22,10 @@ class MostrarMensagemActivity : ComponentActivity() {
         val mensagem = intent.getStringExtra("dataCampoMensagem")
             ?: "Nenhuma mensagem recebida"
 
-
-        // 2. Separar palavras
         val palavras = mensagem?.split(" ") ?: emptyList()
 
-        // 3. Contar palavras
         val numPalavras = palavras.size
 
-        // 4. Verificar estado
         val status = if (palavras.isEmpty()) {
             "Não processado"
         } else {
@@ -42,7 +38,6 @@ class MostrarMensagemActivity : ComponentActivity() {
             else -> "Foram encontradas $numPalavras palavras"
         }
 
-        // 6. Apresentar resultados
         Log.d("EXERCICIO_2_1", "Mensagem: $mensagem")
         Log.d("EXERCICIO_2_1", "Palavras: $palavras")
         Log.d("EXERCICIO_2_1", "Quantidade: $numPalavras")

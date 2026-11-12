@@ -90,6 +90,19 @@ class MainActivity : ComponentActivity() {
                         ) {
                             Text("Enviar mensagem")
                         }
+
+                        Button(
+                            onClick = {
+                                val intent = Intent(
+                                    contexto,
+                                    GestorTarefasActivity::class.java
+                                )
+                                contexto.startActivity(intent)
+                            },
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            Text("Abrir Gestor de Tarefa")
+                        }
                     }
                 }
             }
